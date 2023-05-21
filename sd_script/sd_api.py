@@ -35,52 +35,6 @@ def decode_image(src):
     # with open(save_path, "wb") as f:
     #     f.write(img)
 
-
-def img2img(imgpath, url, prompt, width, height):
-    imgse64 = encode_pil_to_base64(Image.open(imgpath))
-    payload = {
-        "init_images": [
-            imgse64
-        ],
-        "resize_mode": 0,
-        "denoising_strength": 0.75,
-        "mask": None,
-        "mask_blur": 4,
-        "inpainting_fill": 1,
-        "inpaint_full_res": True,
-        "inpaint_full_res_padding": 32,
-        "inpainting_mask_invert": 0,
-        "prompt": "masterpiece, best quality, " + prompt,
-        "styles": [
-            ""
-        ],
-        "seed": -1,
-        "subseed": -1,
-        "subseed_strength": 0,
-        "seed_resize_from_h": -1,
-        "seed_resize_from_w": -1,
-        "batch_size": 8,
-        "n_iter": 1,
-        "steps": 20,
-        "cfg_scale": 7,
-        "width": width,
-        "height": height,
-        "restore_faces": False,
-        "tiling": False,
-        "negative_prompt": "nsfw, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry",
-        "eta": 0,
-        "s_churn": 0,
-        "s_tmax": 0,
-        "s_tmin": 0,
-        "s_noise": 1,
-        "override_settings": {},
-        "sampler_index": "Euler a",
-        "include_init_images": False
-        }
-
-    req = requests.post(url = url, json = payload)
-    return json.loads(req.text)
-
 def text2img(url, prompt):
     payload = {
     "enable_hr": False,
@@ -122,41 +76,6 @@ def text2img(url, prompt):
     }
     req = requests.post(url = url, json = payload)
     return json.loads(req.text)
-
-def img2img_exapmle():
-    src_img_path = "random90"
-    prompt_path = src_img_path + "_prompt"
-    gn_imgs_path = src_img_path + "_gn_4"
-    if gn_imgs_path not in os.listdir():
-        os.mkdir(gn_imgs_path)
-    imgs_path = glob.glob(src_img_path + "/*")
-    img2img_url = "http://127.0.0.1:8083/sdapi/v1/img2img"
-
-    imgs_num = len(imgs_path)
-    for img_idx, img_path in enumerate(imgs_path):
-        print("SD生成进度: %.2f%%" % ((img_idx + 1) / float(imgs_num) * 100))
-        gn_img_fname = img_path.split("/")[-1].split(".")[0]
-        prompt_txt_path = prompt_path + "/" + img_path.split("/")[-1].split(".")[0] + ".txt"
-        prompt = ""
-        with open(prompt_txt_path, "r") as f:
-            prompt = f.readline().strip()
-        src_img = cv2.imread(img_path)
-        h, w, c = src_img.shape
-        height = 768
-        width = 768
-        if h > w:
-            ratio = float(w) / float(h)
-            width = math.ceil(width * ratio / 64.0) * 64
-        elif h < w:
-            ratio = float(h) / float(w)
-            height = math.ceil(height * ratio / 64.0) * 64
-    
-        res = img2img(img_path, img2img_url, prompt, width, height)
-        for idx, image in enumerate(res['images']):
-            gn_img = decode_image(image)
-            gn_img_save_path = gn_imgs_path + "/" + gn_img_fname + "_" + str(idx + 1) + ".jpg"
-            with open(gn_img_save_path, "wb") as f:
-                f.write(gn_img)
 
 def text2img_example():
     # api 请求地址，server 启动命令 python launch.py --api 增加一个api参数
