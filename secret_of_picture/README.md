@@ -2,4 +2,4 @@
 
 视频教程：
 
-[https://b23.tv/hfKRRDC]（https://b23.tv/hfKRRDC）
+[https://b23.tv/hfKRRDC](https://b23.tv/hfKRRDC）
