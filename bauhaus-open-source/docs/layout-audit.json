@@ -1,0 +1,97 @@
+{
+  "catalog": 295,
+  "showroom": 80,
+  "overlaps": [],
+  "routes": {
+    "entry": true,
+    "study": true,
+    "bedroom": true,
+    "living": true,
+    "dry": true,
+    "bath": true,
+    "front": true,
+    "rear": true
+  },
+  "surfaceSupport": [
+    {
+      "id": "B-p17",
+      "supported": true
+    },
+    {
+      "id": "night-42",
+      "supported": true
+    },
+    {
+      "id": "night-44",
+      "supported": true
+    },
+    {
+      "id": "night-45",
+      "supported": true
+    },
+    {
+      "id": "night-46",
+      "supported": true
+    },
+    {
+      "id": "night-47",
+      "supported": true
+    },
+    {
+      "id": "night-48",
+      "supported": true
+    },
+    {
+      "id": "night-50",
+      "supported": true
+    },
+    {
+      "id": "night-52",
+      "supported": true
+    },
+    {
+      "id": "night-53",
+      "supported": true
+    },
+    {
+      "id": "night-54",
+      "supported": true
+    },
+    {
+      "id": "night-58",
+      "supported": true
+    },
+    {
+      "id": "B-v3-master-mattress",
+      "supported": true
+    },
+    {
+      "id": "B-v3-master-bedding",
+      "supported": true
+    },
+    {
+      "id": "B-v4-pattern-lamp",
+      "supported": true
+    },
+    {
+      "id": "B-v4-dome-lamp",
+      "supported": true
+    },
+    {
+      "id": "B-v4-candle",
+      "supported": true
+    },
+    {
+      "id": "B-v4-tray",
+      "supported": true
+    },
+    {
+      "id": "B-v4-bed-lamp",
+      "supported": true
+    },
+    {
+      "id": "B-v5-guest-bedding",
+      "supported": true
+    }
+  ]
+}

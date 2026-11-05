@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import vm from 'node:vm';
+import assert from 'node:assert/strict';
+import { fileURLToPath } from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const file=path.join(root,process.argv[2]||'standalone.html');
+const html=fs.readFileSync(file,'utf8');
+assert(!/<script\b[^>]*\bsrc\s*=/.test(html),'单文件仍依赖外部脚本');
+assert(!/<link\b[^>]*rel="stylesheet"/.test(html),'单文件仍依赖外部样式');
+const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
+assert.equal(scripts.length,1,'单文件脚本标签被意外截断');
+new vm.Script(scripts[0][1],{filename:'standalone-inline.js'});
+assert(html.includes('__BAUHAUS_ASSETS__')&&html.includes('__BAUHAUS_DATA__'),'缺少内嵌资源');
+const notices=fs.readFileSync(path.join(root,'licenses/three-LICENSE.txt'),'utf8');
+assert(notices.includes('MIT'),'缺少 Three.js 许可');
+console.log(JSON.stringify({file:path.relative(root,file),bytes:Buffer.byteLength(html),inlineScripts:scripts.length,syntax:'PASS',externalScripts:0,externalStyles:0},null,2));

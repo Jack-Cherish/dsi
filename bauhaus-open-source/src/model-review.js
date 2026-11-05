@@ -1,0 +1,66 @@
+import { loadData, assetURL } from "./runtime.js";
+import * as T from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+import { materials } from "./materials.js";
+import { product } from "./objects.js";
+const data = await loadData(), ps = data.catalog.filter((p) => p.kind === "sofa" || p.modelV5), M = await materials();
+const select = document.querySelector("select");
+select.innerHTML = ps.map((p) => `<option value="${p.id}">${p.name}</option>`).join("");
+const r = new T.WebGLRenderer({ antialias: true });
+r.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+r.shadowMap.enabled = true;
+r.shadowMap.type = T.PCFSoftShadowMap;
+r.toneMapping = T.ACESFilmicToneMapping;
+r.toneMappingExposure = 0.95;
+document.querySelector("#stage").append(r.domElement);
+const s = new T.Scene();
+s.background = new T.Color("#d8d4ca");
+s.environment = new T.PMREMGenerator(r).fromScene(new RoomEnvironment(), 0.04).texture;
+const c = new T.PerspectiveCamera(38, 1, 0.01, 100), orbit = new OrbitControls(c, r.domElement);
+orbit.enableDamping = true;
+s.add(new T.HemisphereLight("#ffffff", "#555044", 1.2));
+const l = new T.DirectionalLight("#fff7e7", 3);
+l.position.set(-3, 6, 4);
+l.castShadow = true;
+l.shadow.mapSize.set(2048, 2048);
+l.shadow.normalBias = 5e-3;
+s.add(l);
+const floor = new T.Mesh(new T.PlaneGeometry(50, 50), new T.MeshStandardMaterial({ color: "#d5d1c7", roughness: 1 }));
+floor.rotation.x = -Math.PI / 2;
+floor.position.y = -0.015;
+floor.receiveShadow = true;
+s.add(floor);
+let obj;
+function show() {
+  const p = ps.find((p2) => p2.id === select.value);
+  if (obj) s.remove(obj);
+  obj = product(p, M);
+  s.add(obj);
+  const scale = Math.max(...p.dims);
+  c.position.set(scale * 1.4, scale * 0.9, scale * 1.8);
+  orbit.target.set(0, p.dims[2] * 0.45, 0);
+  orbit.update();
+  const photo = document.querySelector("img");
+  photo.hidden = true;
+  photo.onload = () => {
+    photo.hidden = false;
+    photo.dataset.ready = p.id;
+  };
+  photo.src = p.photo;
+  document.querySelector("#caption").textContent = p.name + " \xB7 " + p.dims.map((v) => Math.round(v * 1e3)).join(" \xD7 ") + " mm";
+  document.querySelector("#note").textContent = p.modelNote;
+  document.querySelector("#source").href = p.url;
+}
+select.onchange = show;
+show();
+new ResizeObserver(() => {
+  const el = document.querySelector("#stage");
+  r.setSize(el.clientWidth, el.clientHeight);
+  c.aspect = el.clientWidth / el.clientHeight;
+  c.updateProjectionMatrix();
+}).observe(document.querySelector("#stage"));
+r.setAnimationLoop(() => {
+  orbit.update();
+  r.render(s, c);
+});

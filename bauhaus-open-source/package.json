@@ -1,0 +1,17 @@
+{
+  "name": "bauhaus-living-studio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three.js 包豪斯夜景样板间与软装放置编辑器",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "build:public": "node scripts/build.mjs --public",
+    "check": "node scripts/check.mjs && node scripts/audit-models.mjs && node scripts/audit-layout.mjs"
+  },
+  "dependencies": { "three": "0.180.0" },
+  "devDependencies": { "esbuild": "0.25.11" }
+}

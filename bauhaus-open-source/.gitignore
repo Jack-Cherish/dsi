@@ -1,0 +1,11 @@
+node_modules/
+dist/
+standalone.html
+release-public/
+*.log
+.DS_Store
+Thumbs.db
+
+
+# 第三方商品图：未确认再分发许可，仅保留在本地（见 THIRD_PARTY_NOTICES.md）
+public/products/
