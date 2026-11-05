@@ -1,0 +1,102 @@
+{
+  "repository": "https://github.com/moeru-ai/airi.git",
+  "commit": "33b12e970fcc3547a11543eb57d69bc9d7a12ec1",
+  "package_manager": "pnpm@11.24.0",
+  "overlay": [
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/components/screen-companion.browser.test.ts",
+      "base_sha256": null,
+      "sha256": "9a9c010a057adaf43ab256aeed0639611213b6b52bb9127280158520d23f35de"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/components/screen-companion.vue",
+      "base_sha256": null,
+      "sha256": "215c443d34ddfde18bb03d027111f62d4dd9fe8d49e51fbb206b94996f6a424d"
+    },
+    {
+      "path": "apps/stage-tamagotchi/src/renderer/pages/index.vue",
+      "base_sha256": "a213b5859079b4834aad83a37dfcb17e80dbecaed57d6b073493a42d134c8ed4",
+      "sha256": "c314ae0b84cd0243d0bebe6b603ab2b5e3fcb1f636e74944657deca3d39e7768"
+    },
+    {
+      "path": "apps/stage-web/src/pages/index.vue",
+      "base_sha256": "edec70fd904d18a6aa12d73ea6cac4ce3b1eeff7a604cedfb24a95c4838e863c",
+      "sha256": "f3c1b05ed7098cd4ba0ee333a5161b4169157f954f2b6236d94d3080e10bf925"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-host-options.test.ts",
+      "base_sha256": "cf0967f106027667f7c6e2f45848e73834a6209817e979cb435b5115bb2a7431",
+      "sha256": "744f4966bf2f7b5a4f2e65860b378e69e71725edfe1b26fe33a880fab78955a9"
+    },
+    {
+      "path": "packages/core-agent/src/runtime/chat-orchestrator-runtime.ts",
+      "base_sha256": "f5af1895aa69534b3270b2b0c36fe864d6f8716458b8cc9ee37ba0a50aa9512a",
+      "sha256": "1d8bf97e86a6d3c82b9c45b84c5a7817072c672247e1509ed3b49b5a67b10a37"
+    },
+    {
+      "path": "packages/i18n/src/locales/en/stage.yaml",
+      "base_sha256": "0cc1641ef100dac703ff1943b8adba109dff95b6b5e66e2394635a769b92aff5",
+      "sha256": "9f305f149dde2a4f73dc1a95267f16f80b1a0b83f3c7dde4aed400170c7b5b09"
+    },
+    {
+      "path": "packages/i18n/src/locales/zh-Hans/stage.yaml",
+      "base_sha256": "2f0004a7111b3343f915c324faa07d683fc286931aebddffd2d8521dd4f8db81",
+      "sha256": "190b19b9752dbc4656bff6b8ba5f6238e26d9f7e870afec1203d09ee0629cca2"
+    },
+    {
+      "path": "packages/stage-ui-live2d/src/components/scenes/live2d/Model.vue",
+      "base_sha256": "4e725cae00e791251673ab49122275054451cf67835118737a162894a4188083",
+      "sha256": "8b1ae998526a98f7142e41b0e26a10999a583986ed373310dd1af57dd8901da9"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/index.ts",
+      "base_sha256": "757df99cf9f38122ff35a069807ee150c1d6ba70b3a29c11cdf24bb10a73a9a8",
+      "sha256": "29242c926888df913535e7bcfe0b32a2722fd57c42032ae8a645ae8d82d18cf3"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/screen-look-button.browser.test.ts",
+      "base_sha256": null,
+      "sha256": "9634a6a88a373f42bab43e3f34ea985c669cbdbf06acda54e24b5f013362e5cb"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenarios/screen-look-button.vue",
+      "base_sha256": null,
+      "sha256": "9b89134ea12d386dca10c2bfaa0b7e49cb8503b8733c85fe26e010b2ec89d3da"
+    },
+    {
+      "path": "packages/stage-ui/src/components/scenes/Stage.vue",
+      "base_sha256": "87bd0dd96208121be5e00a5a6208bf84a6cd0c53633bc10d0592441a25e769ea",
+      "sha256": "ba8ecd89b584a4f10a1b91a5e565efc96f1135806a2e9e4ebc824951c4d2d499"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/screen-change-gate.test.ts",
+      "base_sha256": null,
+      "sha256": "8540f430db1767c2ccfb03ee062610641f021dd7e1d623ec03d6f774383aa091"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/screen-change-gate.ts",
+      "base_sha256": null,
+      "sha256": "0f104902d1090bfb01a66c46cbfecc8001d38995a5947bf3c337c826addfafa4"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/screen-snapshot.browser.test.ts",
+      "base_sha256": null,
+      "sha256": "36fea4f27271e2ca268dcb3152bcdb854c31ee58bc3ad9aa3e1d30191c6a8032"
+    },
+    {
+      "path": "packages/stage-ui/src/composables/screen-snapshot.ts",
+      "base_sha256": null,
+      "sha256": "903053ca0508b7d5a578c435527164073af09982adcda28e1da0905388c835c0"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat-background-tasks.browser.test.ts",
+      "base_sha256": "d33051897d7ba85f62c90afe302a3eb442c5c766c319b904ebc89a4b2def369e",
+      "sha256": "4cbe39085c036e09424097088a249c379615982d72f5b81c498c8b91a483e3b9"
+    },
+    {
+      "path": "packages/stage-ui/src/stores/chat.ts",
+      "base_sha256": "cadf38d788120caa8af0fb05ac83fc8ba1579ee0856a0efa3bd93cd59a8eb22e",
+      "sha256": "05dd849f2f010c03f9cc464cfbfd9ee7fa9cc7d53f11063d728e8ec90c781bfa"
+    }
+  ]
+}

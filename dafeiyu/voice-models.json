@@ -1,0 +1,63 @@
+{
+  "repository": "https://github.com/RVC-Boss/GPT-SoVITS.git",
+  "commit": "04a44eb977586645f33594b72af13a035a2056c6",
+  "downloads": [
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/chinese-hubert-base/config.json",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/chinese-hubert-base/config.json",
+      "sha256": "c3e5060a1277e0f078cc6be9da4528a605dba6ece93018981fe2c820e5c7b103"
+    },
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/chinese-hubert-base/preprocessor_config.json",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/chinese-hubert-base/preprocessor_config.json",
+      "sha256": "dcd684124d06722947939d41ea6ae58dbf10968c60a11a29f23ddc602c64a29b"
+    },
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/chinese-hubert-base/pytorch_model.bin",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/chinese-hubert-base/pytorch_model.bin",
+      "sha256": "24164f129c66499d1346e2aa55f183250c223161ec2770c0da3d3b08cf432d3c"
+    },
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/chinese-roberta-wwm-ext-large/config.json",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large/config.json",
+      "sha256": "3d57de2fd7e80d0e5c8ff194f0bbb6baa10df7e43fc262a0cc71298a78b0a3e5"
+    },
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/chinese-roberta-wwm-ext-large/tokenizer.json",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large/tokenizer.json",
+      "sha256": "173796956820ea27bd14f76bf28162607ff4254807e2948253eb5b46f5bb643b"
+    },
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/chinese-roberta-wwm-ext-large/pytorch_model.bin",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/chinese-roberta-wwm-ext-large/pytorch_model.bin",
+      "sha256": "e53a693acc59ace251d143d068096ae0d7b79e4b1b503fa84c9dcf576448c1d8"
+    },
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/s1v3.ckpt",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/s1v3.ckpt",
+      "sha256": "87133414860ea14ff6620c483a3db5ed07b44be42e2c3fcdad65523a729a745a"
+    },
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/v2Pro/s2Gv2ProPlus.pth",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/v2Pro/s2Gv2ProPlus.pth",
+      "sha256": "d42a22bbbf65fb2bbdd45ad6a66841156977db45c7aabe0a6992ff378d9c7d3b"
+    },
+    {
+      "url": "https://huggingface.co/lj1995/GPT-SoVITS/resolve/main/sv/pretrained_eres2netv2w24s4ep4.ckpt",
+      "path": "GPT-SoVITS/GPT_SoVITS/pretrained_models/sv/pretrained_eres2netv2w24s4ep4.ckpt",
+      "sha256": "4f5a0bf73c61eb41b174e1bb54e7ee3c83233892be8e0af1f187024e8e581a35"
+    },
+    {
+      "url": "https://huggingface.co/XXXXRT/GPT-SoVITS-Pretrained/resolve/main/G2PWModel.zip",
+      "path": "downloads/G2PWModel.zip",
+      "sha256": "46292be0374a49308069233cd5c147ae4c41806558e4781a2467a31a4d8099da",
+      "extract_to": "GPT-SoVITS/GPT_SoVITS/text"
+    },
+    {
+      "url": "https://huggingface.co/XXXXRT/GPT-SoVITS-Pretrained/resolve/main/nltk_data.zip",
+      "path": "downloads/nltk_data.zip",
+      "sha256": "eb3ec26ace3f9ccbb08a6d333e26f0941c47e230ece0717dc992bdb7e99808dd",
+      "extract_to": "GPT-SoVITS/runtime"
+    }
+  ]
+}

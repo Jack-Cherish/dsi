@@ -1,0 +1,7 @@
+{
+  "voice": "fish-girl",
+  "ref_audio_path": "recordings/reference.wav",
+  "prompt_text": "填写参考录音逐字对应的台词",
+  "prompt_lang": "zh",
+  "playback_speed": 1
+}

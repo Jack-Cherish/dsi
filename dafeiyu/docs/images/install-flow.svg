@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+<title id="title">从下载到使用：大肥鱼安装流程</title>
+<desc id="desc">解压项目，交给 Agent，安装构建，填写自己的服务设置，导入角色，运行桌宠或网页。蓝色步骤由 Agent 执行，紫色步骤需要用户参与。</desc>
+<rect width="1200" height="520" rx="20" fill="#101c30"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<text x="48" y="62" fill="#f1f5ff" font-size="30" font-weight="700">大肥鱼 · 从下载到开口说话</text>
+<text x="48" y="98" fill="#aebed7" font-size="17">安装操作示意图 · 可把整个项目交给 Agent，按 AGENTS.md 完成部署</text>
+<g fill="#1d3553" stroke="#3f658d" stroke-width="1.5">
+<rect x="48" y="132" width="344" height="130" rx="12"/><rect x="428" y="132" width="344" height="130" rx="12"/><rect x="808" y="132" width="344" height="130" rx="12"/>
+<rect x="428" y="300" width="344" height="130" rx="12"/><rect x="808" y="300" width="344" height="130" rx="12"/>
+</g>
+<rect x="48" y="300" width="344" height="130" rx="12" fill="#33294d" stroke="#7d69a6" stroke-width="1.5"/>
+<g fill="#eff6ff" font-size="22" font-weight="700">
+<text x="70" y="171">01  解压到固定目录</text><text x="450" y="171">02  让 Agent 读取指南</text><text x="830" y="171">03  等待安装和构建</text>
+<text x="70" y="339">04  填写自己的服务设置</text><text x="450" y="339">05  导入并激活角色</text><text x="830" y="339">06  启动并验收</text>
+</g>
+<g fill="#bbcce2" font-size="17">
+<text x="70" y="208">打开含 AGENTS.md 的文件夹</text><text x="70" y="237">推荐短路径，例如 D:\dafeiyu</text>
+<text x="450" y="208">复制 README 中的部署指令</text><text x="450" y="237">由 Agent 检查环境并执行安装</text>
+<text x="830" y="208">Git + Node.js 24 + uv</text><text x="830" y="237">首次联网下载源码、依赖和模型</text>
+<text x="70" y="376">API Key 在应用内填写</text><text x="70" y="405">麦克风与屏幕权限由你授权</text>
+<text x="450" y="376">AIRI 角色卡 → 导入 → 激活</text><text x="450" y="405">.runtime/dafeiyu.airi.zip</text>
+<text x="830" y="376">桌宠 start.cmd / 网页 web.cmd</text><text x="830" y="405">测试回复、发声、口型和动作</text>
+</g>
+<g fill="#94bee8" font-size="26"><text x="399" y="207">→</text><text x="779" y="207">→</text><text x="399" y="375">→</text><text x="779" y="375">→</text></g>
+<text x="48" y="478" fill="#aebed7" font-size="17">日常使用：启动脚本打开应用；stop.cmd 关闭本包服务。网页与桌宠需分别完成首次配置。</text>
+</g></svg>

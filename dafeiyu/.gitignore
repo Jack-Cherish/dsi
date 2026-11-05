@@ -1,0 +1,10 @@
+.runtime/
+__pycache__/
+*.pyc
+voice.local.json
+.env
+.env.*
+!.env.example
+recordings/
+*.log
+*.pid
